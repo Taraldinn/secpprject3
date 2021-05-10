@@ -125,7 +125,7 @@
 <!-- ========== MAIN ========== -->
 <main id="content" role="main">
     <!-- User Profile Section -->
-    <div class="container space-top-3 space-bottom-2">
+    <div class="container space-top-1 space-bottom-2">
         <div class="border-bottom w-md-75 w-lg-60 space-bottom-2 mx-md-auto">
             <!-- Search Section -->
             <div class="bg-navy">
@@ -160,7 +160,6 @@
                  alt="Image Description" />
 
             <div class="card-body">
-                <a class="d-block small font-weight-bold text-cap mb-2" href="#">Buisness </a>
 
                 <h2 class="h3">
                     <a class="text-inherit" href="single-article.html">{{ post.title }}</a>
@@ -176,10 +175,13 @@
                         <div class="avatar avatar-xs avatar-circle" data-toggle="tooltip" data-placement="top"
                              title="Hanna Wolfe">
                             <div class="d-block">
-                                <button type="button"
-                                        class="btn btn-xs btn-outline-primary font-weight-bold text-nowrap ml-1">
-                                    Read more..
-                                </button>
+                                <a href="{{ post.get_absolute_url }}">
+                                    <button
+                                            type="button"
+                                            class="btn btn-xs btn-outline-primary font-weight-bold text-nowrap ml-1">
+                                        View More..
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>

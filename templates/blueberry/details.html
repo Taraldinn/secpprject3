@@ -1,0 +1,520 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Title -->
+    <title>Blog Single Article | Blueberry - Responsive Website Template</title>
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Favicon -->
+
+    <!-- Font -->
+    <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap"
+            rel="stylesheet"
+    />
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="{% static 'blueberry/assets/vendor/font-awesome/css/all.min.css' %}"/>
+    <!-- CSS Blueberry Template -->
+    <link rel="stylesheet" href="{% static 'blueberry/assets/css/theme.css' %}"/>
+
+    <!-- CSS Blueberry Doc -->
+    <link rel="stylesheet" href="{% static 'blueberry/documentation/assets/css/snippets.css' %} "/>
+
+
+</head>
+<body>
+<!-- ========== HEADER ========== -->
+<header id="header" class="header">
+    <div class="header-section">
+        <div id="logoAndNav" class="container">
+            <!-- Nav -->
+            <nav class="js-mega-menu navbar navbar-expand-lg">
+                <div class="navbar-nav-wrap">
+                    <!-- Logo -->
+                    <a class="navbar-brand navbar-nav-wrap-brand" href="#" aria-label="Blueberry">
+                        <img src="{% static "blueberry/assets/svg/logos/logo.svg" %} " alt="Logo">
+                    </a>
+                    <!-- End Logo -->
+
+                    <!-- Secondary Content -->
+                    <div class="navbar-nav-wrap-content text-center">
+                        <!-- Search -->
+                        <a class="js-hs-search-unfold-invoker btn btn-xs btn-icon btn-ghost-secondary search-slide-down-trigger"
+                           href="javascript:;" role="button"
+                           data-hs-unfold-options='{
+                 "target": "#searchSlideDown",
+                 "type": "css-animation",
+                 "animationIn": "fadeIn search-slide-down-show",
+                 "animationOut": "fadeOutUp",
+                 "cssAnimatedClass": null,
+                 "hasOverlay": true,
+                 "overlayClass": ".search-slide-down-bg-overlay",
+                 "overlayStyles": {
+                   "background": "rgba(55, 125, 255, .1)"
+                 },
+                 "duration": 800,
+                 "hideOnScroll": false
+               }'>
+                            <i class="fas fa-search search-slide-down-trigger-icon"></i>
+                        </a>
+                        <!-- End Search -->
+                    </div>
+                    <!-- End Secondary Content -->
+
+                    <!-- Responsive Toggle Button -->
+                    <button type="button"
+                            class="navbar-toggler navbar-nav-wrap-toggler btn btn-icon btn-sm rounded-circle"
+                            aria-label="Toggle navigation"
+                            aria-expanded="false"
+                            aria-controls="navBar"
+                            data-toggle="collapse"
+                            data-target="#navBar">
+            <span class="navbar-toggler-default">
+              <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor"
+                      d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
+              </svg>
+            </span>
+                        <span class="navbar-toggler-toggled">
+              <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor"
+                      d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
+              </svg>
+            </span>
+                    </button>
+                    <!-- End Responsive Toggle Button -->
+
+                    <!-- Navigation -->
+                    <div id="navBar" class="collapse navbar-collapse navbar-nav-wrap-collapse">
+                        <div class="navbar-body header-abs-top-inner">
+                            <ul class="js-scroll-nav navbar-nav header-navbar-nav">
+                                <li class="header-nav-item active">
+                                    <a class="nav-link header-nav-link" href="#">Home</a>
+                                </li>
+                                <li class="header-nav-item">
+                                    <a class="nav-link header-nav-link" href="#">About</a>
+                                </li>
+
+                                <li class="header-nav-item">
+                                    <a class="nav-link header-nav-link" href="#">Contacts</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Navigation -->
+                </div>
+            </nav>
+            <!-- End Nav -->
+        </div>
+    </div>
+</header>
+<!-- ========== END HEADER ========== -->
+
+
+<!-- ========== MAIN ========== -->
+<main id="content" role="main">
+    <!-- Article Description Section -->
+    <div class="container space-top-3 space-bottom-2">
+        <div class="w-lg-60 mx-lg-auto">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'blog:blog_list' %}">Blog Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Details</li>
+                </ol>
+            </nav>
+            {% if messages %}
+            {% for messages in messages %}
+            <div class="alert alert-soft-secondary" role="alert">
+            <strong>{{ messages }}</strong>
+            </div>
+            <div class="mb-4">
+                <h1 class="h2">{{ post.title }}</h1>
+            </div>
+
+            {% endfor %}
+            {% endif %}
+            <!-- Author -->
+            <div class="border-top border-bottom py-4 mb-5">
+                <div class="row align-items-md-center">
+
+
+
+                    <div class="my-4 my-sm-8">
+                        <img
+                                class="img-fluid rounded"
+                                src="{{ post.thumbnail.url }}"
+                                alt="Image Description"
+                        />
+                    </div>
+
+
+
+                </div>
+            </div>
+            <!-- End Author -->
+
+        <p>{{ post.description }}</p>
+
+
+
+
+
+            </div>
+
+            <p>
+                We will continue to update <a href="#">Blueberry</a>; if you have
+                any questions or suggestions, please contact us!
+            </p>
+
+            <p>
+                Follow us on <a href="#">Medium</a>, <a href="#">Twitter</a>,
+                <a href="#">Facebook</a>, <a href="#">YouTube</a>, and
+                <a href="#">Dribbble</a>.
+            </p>
+
+            <!-- Badges -->
+            <div class="mt-5">
+                <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Ecommerce</a>
+                <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Website</a>
+                <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Bootstrap</a>
+                <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Startup</a>
+                <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Free</a>
+            </div>
+            <!-- End Badges -->
+
+            <!-- Share -->
+            <div
+                    class="row justify-content-sm-between align-items-sm-center mt-5"
+            >
+                <div class="col-sm-6 mb-2 mb-sm-0">
+                    <div class="d-flex align-items-center">
+                <span class="d-block small font-weight-bold text-cap mr-2"
+                >Share:</span
+                >
+
+                        <a
+                                class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
+                                href="#"
+                        >
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a
+                                class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
+                                href="#"
+                        >
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a
+                                class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
+                                href="#"
+                        >
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a
+                                class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
+                                href="#"
+                        >
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 text-sm-right">
+                    <a
+                            class="btn btn-xs btn-icon btn-soft-secondary rounded-circle mr-2"
+                            href="#"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Bookmark story"
+                    >
+                        <i class="far fa-bookmark"></i>
+                    </a>
+                    <a
+                            class="btn btn-xs btn-icon btn-soft-secondary rounded-circle"
+                            href="#"
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="Report story"
+                    >
+                        <i class="far fa-flag"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- End Share -->
+
+
+
+            <div class="pt-2 mb-11">
+                <div class="mb-4">
+                    <h3>3 Comments</h3>
+                </div>
+
+                <ul class="list-unstyled">
+                    <!-- Comment -->
+                    <li class="mb-5">
+                        <div class="media align-items-center mb-2">
+
+                            <div class="media-body">
+                                <div
+                                        class="d-flex justify-content-between align-items-center">
+                                    <span class="h5 mb-0">Dave Austin</span>
+                                    <small class="text-muted">1 day ago</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            As a Special Education teacher this resonates so well with me.
+                            Fighting with gen ed teachers to flatten for the students with
+                            learning disabilities. It also confirms some things for me in
+                            my writing.
+                        </p>
+
+                        <a class="font-weight-bold" href="#">Reply</a>
+
+                        <ul class="list-unstyled mt-5">
+
+                        </ul>
+                    </li>
+                    <!-- End Comment -->
+
+                </ul>
+            </div>
+
+            <div class="mb-5">
+                <h3>Post a comment</h3>
+            </div>
+
+            <!-- Form -->
+            <form action="." method="post" class="js-validate">
+                <div class="form-row">
+                    <div class="col-sm-6 mb-sm-3">
+                        <div class="js-form-message form-group">
+                            <label class="input-label">Name</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    name="name"
+                                    id="inputName"
+                                    placeholder="Name"
+                                    aria-label="Name"
+                                    required
+                                    data-msg="Please enter your name."
+                            />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 mb-sm-3">
+                        <div class="js-form-message form-group">
+                            <label class="input-label">Email</label>
+                            <input
+                                    type="text"
+                                    class="form-control"
+                                    name="name"
+                                    id="inputName"
+                                    placeholder="Name"
+                                    aria-label="Name"
+                                    required
+                                    data-msg="Please enter a valid comment."
+                            />
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-sm-3">
+                        <div class="js-form-message form-group">
+                            <label class="input-label">Comment</label>
+                            <textarea
+                                    class="form-control"
+                                    name="body"
+                                    rows="7"
+                                    id="descriptionTextarea"
+                                    placeholder="Comment"
+                                    required
+                                    data-msg="Please enter your message."
+                            ></textarea>
+                        </div>
+                    </div>
+                </div>
+{% csrf_token %} 
+                <div class="d-flex justify-content-center">
+                    <button
+                            type="submit"
+                            class="btn btn-primary btn-wide transition-3d-hover"
+                    >
+                        Submit
+                    </button>
+                </div>
+            </form>
+            <!-- End Form -->
+        </div>
+    </div>
+    <!-- End Article Description Section -->
+
+    <!-- Blog Card Section -->
+    <div class="container">
+        <div class="w-lg-75 border-top space-2 mx-lg-auto">
+            <div class="mb-3 mb-sm-5">
+                <h3>Related stories</h3>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Blog Card -->
+                    <article class="border-bottom h-100 py-5">
+                        <div class="row justify-content-between">
+                            <div class="col-6">
+                                <a
+                                        class="d-block small font-weight-bold text-cap mb-2"
+                                        href="#"
+                                >Product</a
+                                >
+                                <h4 class="mb-0">
+                                    <a class="text-inherit" href="single-article.html"
+                                    >Better is when everything works together</a
+                                    >
+                                </h4>
+                            </div>
+
+                            <div class="col-5">
+                                <img
+                                        class="img-fluid"
+                                        src="../../assets/img/500x280/img1.jpg"
+                                        alt="Image Description"
+                                />
+                            </div>
+                        </div>
+                    </article>
+                    <!-- End Blog Card -->
+                </div>
+
+                <div class="col-md-6">
+                    <!-- Blog Card -->
+                    <article class="border-bottom h-100 py-5">
+                        <div class="row justify-content-between">
+                            <div class="col-6">
+                                <a
+                                        class="d-block small font-weight-bold text-cap mb-2"
+                                        href="#"
+                                >Tech</a
+                                >
+                                <h4 class="mb-0">
+                                    <a class="text-inherit" href="single-article.html"
+                                    >Should You Buy An Apple Pencil?</a
+                                    >
+                                </h4>
+                            </div>
+
+                            <div class="col-5">
+                                <img
+                                        class="img-fluid"
+                                        src="../../assets/img/500x280/img3.jpg"
+                                        alt="Image Description"
+                                />
+                            </div>
+                        </div>
+                    </article>
+                    <!-- End Blog Card -->
+                </div>
+
+                <div class="col-md-6">
+                    <!-- Blog Card -->
+                    <article class="border-bottom h-100 py-5">
+                        <div class="row justify-content-between">
+                            <div class="col-6">
+                                <a
+                                        class="d-block small font-weight-bold text-cap mb-2"
+                                        href="#"
+                                >Product</a
+                                >
+                                <h4 class="mb-0">
+                                    <a class="text-inherit" href="single-article.html"
+                                    >This Watch gym partnerships give you perks for working
+                                        out</a
+                                    >
+                                </h4>
+                            </div>
+
+                            <div class="col-5">
+                                <img
+                                        class="img-fluid"
+                                        src="../../assets/img/500x280/img5.jpg"
+                                        alt="Image Description"
+                                />
+                            </div>
+                        </div>
+                    </article>
+                    <!-- End Blog Card -->
+                </div>
+
+                <div class="col-md-6">
+                    <!-- Blog Card -->
+                    <article class="border-bottom h-100 py-5">
+                        <div class="row justify-content-between">
+                            <div class="col-6">
+                                <a
+                                        class="d-block small font-weight-bold text-cap mb-2"
+                                        href="#"
+                                >Tech</a
+                                >
+                                <h4 class="mb-0">
+                                    <a class="text-inherit" href="single-article.html"
+                                    >Drone Company PrecisionHawk Names New CEO</a
+                                    >
+                                </h4>
+                            </div>
+
+                            <div class="col-5">
+                                <img
+                                        class="img-fluid"
+                                        src="../../assets/img/500x280/img7.jpg"
+                                        alt="Image Description"
+                                />
+                            </div>
+                        </div>
+                    </article>
+                    <!-- End Blog Card -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Blog Card Section -->
+
+
+</main>
+<!-- ========== END MAIN ========== -->
+<!-- ========== FOOTER ========== -->
+
+<footer class="container text-center space-1">
+    <!-- Logo -->
+    <a class="d-inline-flex align-items-center mb-2" href="#" aria-label="Blueberry">
+        <img class="brand" src="{% static "blueberry/assets/svg/logos/logo.svg" %}"
+             alt="{% static "blueberry/assets/svg/logos/logo.svg" %}">
+    </a>
+    <!-- End Logo -->
+
+    <p class="small text-muted mb-0">2020 © Nimusoft. All rights reserved.</p>
+
+<!-- JS Global Compulsory -->
+<script src="{% static "blueberry/assets/vendor/jquery/dist/jquery.min.js" %}"></script>
+<script src="{% static "blueberry/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js" %}"></script>
+<script src="{% static "blueberry/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" %}"></script>
+
+
+<!-- IE Support -->
+<script>
+    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
+        document.write(
+            '<script src="../../assets/vendor/polifills.js"><\/script>'
+        );
+</script>
+</body>
+</html>
