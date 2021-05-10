@@ -132,20 +132,19 @@
                 </ol>
             </nav>
             {% if messages %}
-            {% for messages in messages %}
-            <div class="alert alert-soft-secondary" role="alert">
-            <strong>{{ messages }}</strong>
-            </div>
-            <div class="mb-4">
-                <h1 class="h2">{{ post.title }}</h1>
-            </div>
+                {% for messages in messages %}
+                    <div class="alert alert-soft-secondary{{ messages.tags }}" role="alert">
+                        <strong>{{ messages }}</strong>
+                    </div>
+                    <div class="mb-4">
+                        <h1 class="h2">{{ post.title }}</h1>
+                    </div>
 
-            {% endfor %}
+                {% endfor %}
             {% endif %}
             <!-- Author -->
             <div class="border-top border-bottom py-4 mb-5">
                 <div class="row align-items-md-center">
-
 
 
                     <div class="my-4 my-sm-8">
@@ -157,205 +156,199 @@
                     </div>
 
 
-
                 </div>
             </div>
             <!-- End Author -->
 
-        <p>{{ post.description }}</p>
+            <p>{{ post.description }}</p>
 
 
+        </div>
 
+        <p>
+            We will continue to update <a href="#">Blueberry</a>; if you have
+            any questions or suggestions, please contact us!
+        </p>
 
+        <p>
+            Follow us on <a href="#">Medium</a>, <a href="#">Twitter</a>,
+            <a href="#">Facebook</a>, <a href="#">YouTube</a>, and
+            <a href="#">Dribbble</a>.
+        </p>
 
-            </div>
+        <!-- Badges -->
+        <div class="mt-5">
+            <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Ecommerce</a>
+            <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Website</a>
+            <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Bootstrap</a>
+            <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Startup</a>
+            <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Free</a>
+        </div>
+        <!-- End Badges -->
 
-            <p>
-                We will continue to update <a href="#">Blueberry</a>; if you have
-                any questions or suggestions, please contact us!
-            </p>
-
-            <p>
-                Follow us on <a href="#">Medium</a>, <a href="#">Twitter</a>,
-                <a href="#">Facebook</a>, <a href="#">YouTube</a>, and
-                <a href="#">Dribbble</a>.
-            </p>
-
-            <!-- Badges -->
-            <div class="mt-5">
-                <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Ecommerce</a>
-                <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Website</a>
-                <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Bootstrap</a>
-                <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Startup</a>
-                <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Free</a>
-            </div>
-            <!-- End Badges -->
-
-            <!-- Share -->
-            <div
-                    class="row justify-content-sm-between align-items-sm-center mt-5"
-            >
-                <div class="col-sm-6 mb-2 mb-sm-0">
-                    <div class="d-flex align-items-center">
+        <!-- Share -->
+        <div
+                class="row justify-content-sm-between align-items-sm-center mt-5"
+        >
+            <div class="col-sm-6 mb-2 mb-sm-0">
+                <div class="d-flex align-items-center">
                 <span class="d-block small font-weight-bold text-cap mr-2"
                 >Share:</span
                 >
 
-                        <a
-                                class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
-                                href="#"
-                        >
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a
-                                class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
-                                href="#"
-                        >
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a
-                                class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
-                                href="#"
-                        >
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a
-                                class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
-                                href="#"
-                        >
-                            <i class="fab fa-telegram"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 text-sm-right">
                     <a
-                            class="btn btn-xs btn-icon btn-soft-secondary rounded-circle mr-2"
+                            class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
                             href="#"
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="Bookmark story"
                     >
-                        <i class="far fa-bookmark"></i>
+                        <i class="fab fa-facebook-f"></i>
                     </a>
                     <a
-                            class="btn btn-xs btn-icon btn-soft-secondary rounded-circle"
+                            class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
                             href="#"
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            title="Report story"
                     >
-                        <i class="far fa-flag"></i>
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                            class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
+                            href="#"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a
+                            class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
+                            href="#"
+                    >
+                        <i class="fab fa-telegram"></i>
                     </a>
                 </div>
             </div>
-            <!-- End Share -->
+
+            <div class="col-sm-6 text-sm-right">
+                <a
+                        class="btn btn-xs btn-icon btn-soft-secondary rounded-circle mr-2"
+                        href="#"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Bookmark story"
+                >
+                    <i class="far fa-bookmark"></i>
+                </a>
+                <a
+                        class="btn btn-xs btn-icon btn-soft-secondary rounded-circle"
+                        href="#"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Report story"
+                >
+                    <i class="far fa-flag"></i>
+                </a>
+            </div>
+        </div>
+        <!-- End Share -->
 
 
+        <div class="pt-2 mb-11">
+            <div class="mb-4">
+                <h3>3 Comments</h3>
+            </div>
 
-            <div class="pt-2 mb-11">
-                <div class="mb-4">
-                    <h3>3 Comments</h3>
-                </div>
+            <ul class="list-unstyled">
+                <!-- Comment -->
+                <li class="mb-5">
+                    {% for comment in comments %}
+                    <div class="media align-items-center mb-2">
 
-                <ul class="list-unstyled">
-                    <!-- Comment -->
-                    <li class="mb-5">
-                        <div class="media align-items-center mb-2">
-
-                            <div class="media-body">
-                                <div
-                                        class="d-flex justify-content-between align-items-center">
-                                    <span class="h5 mb-0">Dave Austin</span>
-                                    <small class="text-muted">1 day ago</small>
-                                </div>
+                        <div class="media-body">
+                            <div
+                                    class="d-flex justify-content-between align-items-center">
+                                <span class="h5 mb-0">{{ comment.name }}</span>
+                                <small class="text-muted">{{ comment.creation }}</small>
                             </div>
                         </div>
-
-                        <p>
-                            As a Special Education teacher this resonates so well with me.
-                            Fighting with gen ed teachers to flatten for the students with
-                            learning disabilities. It also confirms some things for me in
-                            my writing.
-                        </p>
-
-                        <a class="font-weight-bold" href="#">Reply</a>
-
-                        <ul class="list-unstyled mt-5">
-
-                        </ul>
-                    </li>
-                    <!-- End Comment -->
-
-                </ul>
-            </div>
-
-            <div class="mb-5">
-                <h3>Post a comment</h3>
-            </div>
-
-            <!-- Form -->
-            <form action="." method="post" class="js-validate">
-                <div class="form-row">
-                    <div class="col-sm-6 mb-sm-3">
-                        <div class="js-form-message form-group">
-                            <label class="input-label">Name</label>
-                            <input
-                                    type="text"
-                                    class="form-control"
-                                    name="name"
-                                    id="inputName"
-                                    placeholder="Name"
-                                    aria-label="Name"
-                                    required
-                                    data-msg="Please enter your name."
-                            />
-                        </div>
                     </div>
 
-                    <div class="col-sm-6 mb-sm-3">
-                        <div class="js-form-message form-group">
-                            <label class="input-label">Email</label>
-                            <input
-                                    type="text"
-                                    class="form-control"
-                                    name="name"
-                                    id="inputName"
-                                    placeholder="Name"
-                                    aria-label="Name"
-                                    required
-                                    data-msg="Please enter a valid comment."
-                            />
-                        </div>
-                    </div>
+                    <p>
+                       {{ comment.body }}
+                    </p>
 
-                    <div class="col-12 mb-sm-3">
-                        <div class="js-form-message form-group">
-                            <label class="input-label">Comment</label>
-                            <textarea
-                                    class="form-control"
-                                    name="body"
-                                    rows="7"
-                                    id="descriptionTextarea"
-                                    placeholder="Comment"
-                                    required
-                                    data-msg="Please enter your message."
-                            ></textarea>
-                        </div>
-                    </div>
-                </div>
-{% csrf_token %} 
-                <div class="d-flex justify-content-center">
-                    <button
-                            type="submit"
-                            class="btn btn-primary btn-wide transition-3d-hover"
-                    >
-                        Submit
-                    </button>
-                </div>
-            </form>
-            <!-- End Form -->
+                    <a class="font-weight-bold" href="#">Reply</a>
+
+                    <ul class="list-unstyled mt-5">
+
+                    </ul>
+                    {% endfor %}
+                </li>
+                <!-- End Comment -->
+
+            </ul>
         </div>
+
+        <div class="mb-5">
+            <h3>Post a comment</h3>
+        </div>
+
+        <!-- Form -->
+        <form action="." method="post" class="js-validate">
+            <div class="form-row">
+                <div class="col-sm-6 mb-sm-3">
+                    <div class="js-form-message form-group">
+                        <label class="input-label">Name</label>
+                        <input
+                                type="text"
+                                class="form-control"
+                                name="name"
+                                id="inputName"
+                                placeholder="Name"
+                                aria-label="Name"
+                                required
+                                data-msg="Please enter your name."
+                        />
+                    </div>
+                </div>
+
+                <div class="col-sm-6 mb-sm-3">
+                    <div class="js-form-message form-group">
+                        <label class="input-label">Email</label>
+                        <input
+                                type="text"
+                                class="form-control"
+                                name="name"
+                                id="inputName"
+                                placeholder="Name"
+                                aria-label="Name"
+                                required
+                                data-msg="Please enter a valid comment."
+                        />
+                    </div>
+                </div>
+
+                <div class="col-12 mb-sm-3">
+                    <div class="js-form-message form-group">
+                        <label class="input-label">Comment</label>
+                        <textarea
+                                class="form-control"
+                                name="body"
+                                rows="7"
+                                id="descriptionTextarea"
+                                placeholder="Comment"
+                                required
+                                data-msg="Please enter your message."
+                        ></textarea>
+                    </div>
+                </div>
+            </div>
+            {% csrf_token %}
+            <div class="d-flex justify-content-center">
+                <button
+                        type="submit"
+                        class="btn btn-primary btn-wide transition-3d-hover"
+                >
+                    Submit
+                </button>
+            </div>
+        </form>
+        <!-- End Form -->
+    </div>
     </div>
     <!-- End Article Description Section -->
 
@@ -503,18 +496,18 @@
 
     <p class="small text-muted mb-0">2020 © Nimusoft. All rights reserved.</p>
 
-<!-- JS Global Compulsory -->
-<script src="{% static "blueberry/assets/vendor/jquery/dist/jquery.min.js" %}"></script>
-<script src="{% static "blueberry/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js" %}"></script>
-<script src="{% static "blueberry/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" %}"></script>
+    <!-- JS Global Compulsory -->
+    <script src="{% static "blueberry/assets/vendor/jquery/dist/jquery.min.js" %}"></script>
+    <script src="{% static "blueberry/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js" %}"></script>
+    <script src="{% static "blueberry/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" %}"></script>
 
 
-<!-- IE Support -->
-<script>
-    if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
-        document.write(
-            '<script src="../../assets/vendor/polifills.js"><\/script>'
-        );
-</script>
+    <!-- IE Support -->
+    <script>
+        if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
+            document.write(
+                '<script src="../../assets/vendor/polifills.js"><\/script>'
+            );
+    </script>
 </body>
 </html>
