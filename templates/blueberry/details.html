@@ -249,7 +249,7 @@
 
         <div class="pt-2 mb-11">
             <div class="mb-4">
-                <h3>3 Comments</h3>
+                <h3>{{ post.comment_count }} comments</h3>
             </div>
 
             <ul class="list-unstyled">
@@ -356,126 +356,45 @@
     <div class="container">
         <div class="w-lg-75 border-top space-2 mx-lg-auto">
             <div class="mb-3 mb-sm-5">
-                <h3>Related stories</h3>
+                <h3>Related blogs</h3>
             </div>
 
             <div class="row">
-                <div class="col-md-6">
-                    <!-- Blog Card -->
-                    <article class="border-bottom h-100 py-5">
-                        <div class="row justify-content-between">
-                            <div class="col-6">
-                                <a
-                                        class="d-block small font-weight-bold text-cap mb-2"
-                                        href="#"
-                                >Product</a
-                                >
-                                <h4 class="mb-0">
-                                    <a class="text-inherit" href="single-article.html"
-                                    >Better is when everything works together</a
+
+
+                {% for post in similar_post %}
+                    <div class="col-md-6">
+
+                        <!-- Blog Card -->
+                        <article class="border-bottom h-100 py-5">
+                            <div class="row justify-content-between">
+                                <div class="col-6">
+                                    <a
+                                            class="d-block small font-weight-bold text-cap mb-2"
+                                            href="{{ post.get_absolute_url }}"
+                                    >{{ post.title }}</a
                                     >
-                                </h4>
-                            </div>
+                                    <h4 class="mb-0">
+                                        <a class="text-inherit" href="{{ post.get_absolute_url }}"
+                                        >{{ post.short_description }}</a
+                                        >
+                                    </h4>
+                                </div>
 
-                            <div class="col-5">
-                                <img
-                                        class="img-fluid"
-                                        src="../../assets/img/500x280/img1.jpg"
-                                        alt="Image Description"
-                                />
+                                <div class="col-5">
+                                    <img class="img-fluid" src="{{ post.thumbnail.url }}" width="500px" height="280px" alt="Image Description"/>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                    <!-- End Blog Card -->
-                </div>
+                        </article>
+                        <!-- End Blog Card -->
+                    </div>
+                {% endfor %}
 
-                <div class="col-md-6">
-                    <!-- Blog Card -->
-                    <article class="border-bottom h-100 py-5">
-                        <div class="row justify-content-between">
-                            <div class="col-6">
-                                <a
-                                        class="d-block small font-weight-bold text-cap mb-2"
-                                        href="#"
-                                >Tech</a
-                                >
-                                <h4 class="mb-0">
-                                    <a class="text-inherit" href="single-article.html"
-                                    >Should You Buy An Apple Pencil?</a
-                                    >
-                                </h4>
-                            </div>
 
-                            <div class="col-5">
-                                <img
-                                        class="img-fluid"
-                                        src="../../assets/img/500x280/img3.jpg"
-                                        alt="Image Description"
-                                />
-                            </div>
-                        </div>
-                    </article>
-                    <!-- End Blog Card -->
-                </div>
 
-                <div class="col-md-6">
-                    <!-- Blog Card -->
-                    <article class="border-bottom h-100 py-5">
-                        <div class="row justify-content-between">
-                            <div class="col-6">
-                                <a
-                                        class="d-block small font-weight-bold text-cap mb-2"
-                                        href="#"
-                                >Product</a
-                                >
-                                <h4 class="mb-0">
-                                    <a class="text-inherit" href="single-article.html"
-                                    >This Watch gym partnerships give you perks for working
-                                        out</a
-                                    >
-                                </h4>
-                            </div>
 
-                            <div class="col-5">
-                                <img
-                                        class="img-fluid"
-                                        src="../../assets/img/500x280/img5.jpg"
-                                        alt="Image Description"
-                                />
-                            </div>
-                        </div>
-                    </article>
-                    <!-- End Blog Card -->
-                </div>
 
-                <div class="col-md-6">
-                    <!-- Blog Card -->
-                    <article class="border-bottom h-100 py-5">
-                        <div class="row justify-content-between">
-                            <div class="col-6">
-                                <a
-                                        class="d-block small font-weight-bold text-cap mb-2"
-                                        href="#"
-                                >Tech</a
-                                >
-                                <h4 class="mb-0">
-                                    <a class="text-inherit" href="single-article.html"
-                                    >Drone Company PrecisionHawk Names New CEO</a
-                                    >
-                                </h4>
-                            </div>
 
-                            <div class="col-5">
-                                <img
-                                        class="img-fluid"
-                                        src="../../assets/img/500x280/img7.jpg"
-                                        alt="Image Description"
-                                />
-                            </div>
-                        </div>
-                    </article>
-                    <!-- End Blog Card -->
-                </div>
             </div>
         </div>
     </div>

@@ -11,8 +11,12 @@ from django.shortcuts import redirect
 # Create your views here.
 def blog_list(request):
     post = Post.objects.all()
+    paginator = Paginator(post, 1)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
     context = {
-        'post': post
+        'post': post,
+        'page_obj': page_obj
     }
 
     return render(request, 'blueberry/index.html', context)
@@ -20,7 +24,7 @@ def blog_list(request):
 
 def blog_details(request, slug):
     post = Post.objects.get(slug=slug)
-    # similar_post = post.tags.similar_objects()[:4]
+    similar_post = post.tags.similar_objects()[:4]
     comments = post.comments.all()
 
     if request.method == 'POST':
@@ -48,7 +52,7 @@ def blog_details(request, slug):
 
     context = {
         'post': post,
-        # 'similar_post': similar_post,
+        'similar_post': similar_post,
         'comments': comments
     }
 

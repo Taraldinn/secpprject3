@@ -1,6 +1,8 @@
 from django.db import models
 from django.urls import reverse
 
+from taggit.managers import TaggableManager
+
 
 # Create your models here.
 class Post(models.Model):
@@ -9,6 +11,7 @@ class Post(models.Model):
     thumbnail = models.ImageField(upload_to='album/photo/')
     sort_description = models.TextField()
     description = models.TextField()
+    tags = TaggableManager()
     creation = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -18,6 +21,10 @@ class Post(models.Model):
         return reverse("blog:blog_details", kwargs={
             "slug": self.slug
         })
+
+    @property
+    def comment_count(self):
+        return Comment.objects.filter(post=self).count()
 
 
 class Comment(models.Model):
