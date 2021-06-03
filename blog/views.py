@@ -1,8 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .forms import CommentForm
 from django.http import HttpResponseRedirect
-from .models import Post
-from django.db.models import Q
+from .models import Post, Category
+from django.db.models import Q, Count
 from django.core.paginator import Paginator
 from django.contrib import messages
 from django.shortcuts import redirect
@@ -10,12 +10,16 @@ from django.shortcuts import redirect
 
 # Create your views here.
 def blog_list(request):
-    post = Post.objects.all()
-    paginator = Paginator(post, 1)
+    posts = Post.objects.all()
+    categories = Category.objects.all().annotate(posts_count=Count('posts'))
+    latest_post = Post.objects.all()[:3]
+    paginator = Paginator(posts, 4)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     context = {
-        'post': post,
+        'posts': posts,
+        'latest_post': latest_post,
+        'categories': categories,
         'page_obj': page_obj
     }
 
@@ -23,6 +27,8 @@ def blog_list(request):
 
 
 def blog_details(request, slug):
+    categories = Category.objects.all().annotate(posts_count=Count('posts'))
+    latest_post = Post.objects.all()[:3]
     post = Post.objects.get(slug=slug)
     similar_post = post.tags.similar_objects()[:4]
     comments = post.comments.all()
@@ -52,6 +58,8 @@ def blog_details(request, slug):
 
     context = {
         'post': post,
+        'latest_post': latest_post,
+        'categories': categories,
         'similar_post': similar_post,
         'comments': comments
     }
@@ -60,6 +68,10 @@ def blog_details(request, slug):
 
 
 def search_blog(request):
+    categories = Category.objects.all().annotate(posts_count=Count('posts'))
+
+    latest_post = Post.objects.all()[:3]
+
     queryset = Post.objects.all()
     query = request.GET.get('q')
 
@@ -69,13 +81,51 @@ def search_blog(request):
 
     if query:
         queryset = queryset.filter(
-            Q(title__icontains=query) | Q(short_description__icontains=query) |
+            Q(title__icontains=query) | Q(sort_description__icontains=query) |
             Q(description__icontains=query)
 
         ).distinct()
     context = {
         'queryset': queryset,
+        'latest_post': latest_post,
+        'categories': categories,
         'query': query
 
     }
+    print(context)
     return render(request, 'blueberry/search.html', context)
+
+
+# def search_blog(request):
+#     search_keyword = request.get['q']
+#     if search_keyword:
+#         post = Post.objects.filter(title__contains=search_keyword)
+#         print( "zahid", post, "fardin")
+#         return render(request, 'blueberry/search.html')
+
+
+def category(request, category_slug=None):
+    category = None
+    categories = Category.objects.all().annotate(posts_count=Count('posts'))
+    posts = Post.objects.all()
+    latest_post = Post.objects.all()[:3]
+    paginator = Paginator(posts, 6)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    if category_slug:
+        category = get_object_or_404(Category, slug=category_slug)
+        posts = posts.filter(category=category)
+
+        paginator = Paginator(posts, 6)
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+
+    context = {
+        'posts': posts,
+        'latest_post': latest_post,
+        'category': category,
+        'categories': categories,
+        'page_obj': page_obj
+    }
+    return render(request, 'blueberry/category.html', context)

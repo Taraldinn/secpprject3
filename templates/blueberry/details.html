@@ -1,432 +1,622 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
+<!-- Mirrored from maanjaa.com/themeger/katen-demo/html/blog-single-alt.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 May 2021 18:18:50 GMT -->
 <head>
-    <!-- Title -->
-    <title>Blog Single Article | Blueberry - Responsive Website Template</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Katen - Minimal Blog & Magazine HTML Theme</title>
+    <meta name="description" content="Katen - Minimal Blog & Magazine HTML Theme">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
 
-    <!-- Required Meta Tags Always Come First -->
-    <meta charset="utf-8"/>
-    <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <!-- STYLES -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/all.min.css"' %} type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/simple-line-icons.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
 
-    <!-- Favicon -->
-
-    <!-- Font -->
-    <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap"
-            rel="stylesheet"
-    />
-
-    <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="{% static 'blueberry/assets/vendor/font-awesome/css/all.min.css' %}"/>
-    <!-- CSS Blueberry Template -->
-    <link rel="stylesheet" href="{% static 'blueberry/assets/css/theme.css' %}"/>
-
-    <!-- CSS Blueberry Doc -->
-    <link rel="stylesheet" href="{% static 'blueberry/documentation/assets/css/snippets.css' %} "/>
-
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
+
 <body>
-<!-- ========== HEADER ========== -->
-<header id="header" class="header">
-    <div class="header-section">
-        <div id="logoAndNav" class="container">
-            <!-- Nav -->
-            <nav class="js-mega-menu navbar navbar-expand-lg">
-                <div class="navbar-nav-wrap">
-                    <!-- Logo -->
-                    <a class="navbar-brand navbar-nav-wrap-brand" href="#" aria-label="Blueberry">
-                        <img src="{% static "blueberry/assets/svg/logos/logo.svg" %} " alt="Logo">
-                    </a>
-                    <!-- End Logo -->
 
-                    <!-- Secondary Content -->
-                    <div class="navbar-nav-wrap-content text-center">
-                        <!-- Search -->
-                        <a class="js-hs-search-unfold-invoker btn btn-xs btn-icon btn-ghost-secondary search-slide-down-trigger"
-                           href="javascript:;" role="button"
-                           data-hs-unfold-options='{
-                 "target": "#searchSlideDown",
-                 "type": "css-animation",
-                 "animationIn": "fadeIn search-slide-down-show",
-                 "animationOut": "fadeOutUp",
-                 "cssAnimatedClass": null,
-                 "hasOverlay": true,
-                 "overlayClass": ".search-slide-down-bg-overlay",
-                 "overlayStyles": {
-                   "background": "rgba(55, 125, 255, .1)"
-                 },
-                 "duration": 800,
-                 "hideOnScroll": false
-               }'>
-                            <i class="fas fa-search search-slide-down-trigger-icon"></i>
-                        </a>
-                        <!-- End Search -->
+<!-- preloader -->
+<div id="preloader">
+    <div class="book">
+        <div class="inner">
+            <div class="left"></div>
+            <div class="middle"></div>
+            <div class="right"></div>
+        </div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+
+<!-- site wrapper -->
+<div class="site-wrapper">
+
+    <div class="main-overlay"></div>
+
+    <!-- header -->
+    <header class="header-personal">
+        <div class="container-xl header-top">
+            <div class="row align-items-center">
+
+                <div class="col-4 d-none d-md-block d-lg-block">
+                    <!-- social icons -->
+                    <ul class="social-icons list-unstyled list-inline mb-0">
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-medium"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12 text-center">
+                    <!-- site logo -->
+                    <a href="/" class="d-block text-logo">Fardin<span class="dot">.</span></a>
+                    <span class="slogan d-block">Professional Writer & Personal Blogger</span>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <!-- header buttons -->
+                    <div class="header-buttons float-md-end mt-4 mt-md-0">
+                        <button class="search icon-button">
+                            <i class="icon-magnifier"></i>
+                        </button>
+                        <button class="burger-menu icon-button ms-2 float-end float-md-none">
+                            <span class="burger-icon"></span>
+                        </button>
                     </div>
-                    <!-- End Secondary Content -->
+                </div>
 
-                    <!-- Responsive Toggle Button -->
-                    <button type="button"
-                            class="navbar-toggler navbar-nav-wrap-toggler btn btn-icon btn-sm rounded-circle"
-                            aria-label="Toggle navigation"
-                            aria-expanded="false"
-                            aria-controls="navBar"
-                            data-toggle="collapse"
-                            data-target="#navBar">
-            <span class="navbar-toggler-default">
-              <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor"
-                      d="M17.4,6.2H0.6C0.3,6.2,0,5.9,0,5.5V4.1c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,5.9,17.7,6.2,17.4,6.2z M17.4,14.1H0.6c-0.3,0-0.6-0.3-0.6-0.7V12c0-0.4,0.3-0.7,0.6-0.7h16.9c0.3,0,0.6,0.3,0.6,0.7v1.4C18,13.7,17.7,14.1,17.4,14.1z"/>
-              </svg>
-            </span>
-                        <span class="navbar-toggler-toggled">
-              <svg width="14" height="14" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor"
-                      d="M11.5,9.5l5-5c0.2-0.2,0.2-0.6-0.1-0.9l-1-1c-0.3-0.3-0.7-0.3-0.9-0.1l-5,5l-5-5C4.3,2.3,3.9,2.4,3.6,2.6l-1,1 C2.4,3.9,2.3,4.3,2.5,4.5l5,5l-5,5c-0.2,0.2-0.2,0.6,0.1,0.9l1,1c0.3,0.3,0.7,0.3,0.9,0.1l5-5l5,5c0.2,0.2,0.6,0.2,0.9-0.1l1-1 c0.3-0.3,0.3-0.7,0.1-0.9L11.5,9.5z"/>
-              </svg>
-            </span>
-                    </button>
-                    <!-- End Responsive Toggle Button -->
+            </div>
+        </div>
 
-                    <!-- Navigation -->
-                    <div id="navBar" class="collapse navbar-collapse navbar-nav-wrap-collapse">
-                        <div class="navbar-body header-abs-top-inner">
-                            <ul class="js-scroll-nav navbar-nav header-navbar-nav">
-                                <li class="header-nav-item active">
-                                    <a class="nav-link header-nav-link" href="#">Home</a>
-                                </li>
-                                <li class="header-nav-item">
-                                    <a class="nav-link header-nav-link" href="#">About</a>
-                                </li>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-xl">
 
-                                <li class="header-nav-item">
-                                    <a class="nav-link header-nav-link" href="#">Contacts</a>
-                                </li>
+                <div class="collapse navbar-collapse justify-content-center centered-nav">
+                    <!-- menus -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link " href="/">Home</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.html">About Me</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- cover header -->
+    <section class="single-cover data-bg-image" data-bg-image="{{ post.thumbnail.url }}">
+
+        <div class="container-xl">
+
+            <div class="cover-content post">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">{{ post.title }}</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">3 Easy Ways To Make Your iPhone Faster</li>
+                    </ol>
+                </nav>
+
+                <!-- post header -->
+                <div class="post-header">
+                    <h1 class="title mt-0 mb-3">{{ post.title }}</h1>
+                    <ul class="meta list-inline mb-0">
+                        <li class="list-inline-item"><a href="#">{{ post.category.name }}</a></li>
+                        <li class="list-inline-item">{{ post.creation | date }}</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- section main content -->
+    <section class="main-content">
+        <div class="container-xl">
+
+            <div class="row gy-4">
+
+                <div class="col-lg-8">
+                    <!-- post single -->
+                    <div class="post post-single">
+                        <!-- post content -->
+                        <div class="post-content clearfix">
+
+                            {{ post.description | safe }}
+
+
+                        </div>
+                        <!-- post bottom section -->
+                        <div class="post-bottom">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-md-6 col-12 text-center text-md-start">
+                                    <!-- tags -->
+                                    <a href="#" class="tag">#Trending</a>
+                                    <a href="#" class="tag">#Video</a>
+                                    <a href="#" class="tag">#Featured</a>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <!-- social icons -->
+                                    <ul class="social-icons list-unstyled list-inline mb-0 float-md-end">
+                                        <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                        <li class="list-inline-item"><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+                                        <li class="list-inline-item"><a href="#"><i class="far fa-envelope"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="spacer" data-height="50"></div>
+
+                    <div class="about-author padding-30 rounded">
+                        <div class="thumb">
+                            <img src="{% static 'images/other/avatar-about.png' %}" alt="Katen Doe" />
+                        </div>
+                        <div class="details">
+                            <h4 class="name"><a href="#">Katen Doe</a></h4>
+                            <p>Hello, I’m a content writer who is fascinated by content fashion, celebrity and lifestyle. She helps clients bring the right content to the right people.</p>
+                            <!-- social icons -->
+                            <ul class="social-icons list-unstyled list-inline mb-0">
+                                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fab fa-medium"></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
                             </ul>
                         </div>
                     </div>
-                    <!-- End Navigation -->
-                </div>
-            </nav>
-            <!-- End Nav -->
-        </div>
-    </div>
-</header>
-<!-- ========== END HEADER ========== -->
+
+                    <div class="spacer" data-height="50"></div>
 
 
-<!-- ========== MAIN ========== -->
-<main id="content" role="main">
-    <!-- Article Description Section -->
-    <div class="container space-top-3 space-bottom-2">
-        <div class="w-lg-60 mx-lg-auto">
-
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{% url 'blog:blog_list' %}">Blog Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Details</li>
-                </ol>
-            </nav>
-            {% if messages %}
-                {% for messages in messages %}
-                    <div class="alert alert-soft-secondary{{ messages.tags }}" role="alert">
-                        <strong>{{ messages }}</strong>
-                    </div>
-                    <div class="mb-4">
-                        <h1 class="h2">{{ post.title }}</h1>
-                    </div>
-
-                {% endfor %}
-            {% endif %}
-            <!-- Author -->
-            <div class="border-top border-bottom py-4 mb-5">
-                <div class="row align-items-md-center">
 
 
-                    <div class="my-4 my-sm-8">
-                        <img
-                                class="img-fluid rounded"
-                                src="{{ post.thumbnail.url }}"
-                                alt="Image Description"
-                        />
+
+
+
+                    <!-- section header -->
+                    <div class="section-header">
+                        <h3 class="section-title">Comments ({{ post.comment_count }} )</h3>
+                        <img src="{% static 'images/wave.svg' %}" class="wave" alt="wave" />
                     </div>
 
 
+
+                    <!-- post comments -->
+                    <div class="comments bordered padding-30 rounded">
+
+                        <ul class="comments">
+                            {% for comment in comments %}
+
+                            <!-- comment item -->
+                            <li class="comment rounded">
+                                <div class="details">
+                                    <h4 class="name"><a href="#">{{ comment.name }}</a></h4>
+                                    <span class="date">{{ comment.creation }}</span>
+                                    <p>{{ comment.body }}</p>
+                                </div>
+                            </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+
+                    <div class="spacer" data-height="50"></div>
+
+                    <!-- section header -->
+                    <div class="section-header">
+                        <h3 class="section-title">Leave Comment</h3>
+                        <img src="{% static 'images/wave.svg' %}" class="wave" alt="wave" />
+                    </div>
+                    <!-- comment form -->
+                    <div class="comment-form rounded bordered padding-30">
+
+
+
+
+                        <form action="." method="post" class="js-validate">
+                            <div class="form-row">
+                                <div class="col-sm-12 mb-sm-3">
+                                    <div class="js-form-message form-group">
+
+                                        <input
+                                                type="text"
+                                                class="form-control"
+                                                name="name"
+                                                id="inputName"
+                                                placeholder="Name"
+                                                aria-label="Name"
+                                                required
+                                                data-msg="Please enter your name."
+                                        />
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 mb-sm-3">
+                                    <div class="js-form-message form-group">
+
+                                        <textarea
+                                                class="form-control"
+                                                name="body"
+                                                rows="7"
+                                                id="descriptionTextarea"
+                                                placeholder="Comment"
+                                                required
+                                                data-msg="Please enter your message."
+                                        ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            {% csrf_token %}
+                            <div class="d-flex justify-content-center">
+                                <button
+                                        type="submit"
+                                        class="btn btn-default btn-wide transition-3d-hover"
+                                >
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
+
+
+
+                    </div>
                 </div>
-            </div>
-            <!-- End Author -->
 
-            <p>{{ post.description }}</p>
+                <div class="col-lg-4">
 
-
-        </div>
-
-        <p>
-            We will continue to update <a href="#">Blueberry</a>; if you have
-            any questions or suggestions, please contact us!
-        </p>
-
-        <p>
-            Follow us on <a href="#">Medium</a>, <a href="#">Twitter</a>,
-            <a href="#">Facebook</a>, <a href="#">YouTube</a>, and
-            <a href="#">Dribbble</a>.
-        </p>
-
-        <!-- Badges -->
-        <div class="mt-5">
-            <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Ecommerce</a>
-            <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Website</a>
-            <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Bootstrap</a>
-            <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Startup</a>
-            <a class="btn btn-xs btn-soft-secondary mb-1" href="#">Free</a>
-        </div>
-        <!-- End Badges -->
-
-        <!-- Share -->
-        <div
-                class="row justify-content-sm-between align-items-sm-center mt-5"
-        >
-            <div class="col-sm-6 mb-2 mb-sm-0">
-                <div class="d-flex align-items-center">
-                <span class="d-block small font-weight-bold text-cap mr-2"
-                >Share:</span
-                >
-
-                    <a
-                            class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
-                            href="#"
-                    >
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a
-                            class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
-                            href="#"
-                    >
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a
-                            class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
-                            href="#"
-                    >
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a
-                            class="btn btn-xs btn-icon btn-ghost-secondary rounded-circle mr-2"
-                            href="#"
-                    >
-                        <i class="fab fa-telegram"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-sm-6 text-sm-right">
-                <a
-                        class="btn btn-xs btn-icon btn-soft-secondary rounded-circle mr-2"
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        title="Bookmark story"
-                >
-                    <i class="far fa-bookmark"></i>
-                </a>
-                <a
-                        class="btn btn-xs btn-icon btn-soft-secondary rounded-circle"
-                        href="#"
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        title="Report story"
-                >
-                    <i class="far fa-flag"></i>
-                </a>
-            </div>
-        </div>
-        <!-- End Share -->
-
-
-        <div class="pt-2 mb-11">
-            <div class="mb-4">
-                <h3>{{ post.comment_count }} comments</h3>
-            </div>
-
-            <ul class="list-unstyled">
-                <!-- Comment -->
-                <li class="mb-5">
-                    {% for comment in comments %}
-                    <div class="media align-items-center mb-2">
-
-                        <div class="media-body">
-                            <div
-                                    class="d-flex justify-content-between align-items-center">
-                                <span class="h5 mb-0">{{ comment.name }}</span>
-                                <small class="text-muted">{{ comment.creation }}</small>
+                    <!-- sidebar -->
+                    <div class="sidebar">
+                        <!-- widget about -->
+                        <div class="widget rounded">
+                            <div class="widget-about data-bg-image text-center" data-bg-image="images/map-bg.png">
+                                <img src="{% static 'images/logo.svg' %}" alt="logo" class="mb-4" />
+                                <p class="mb-4">Hello, We’re content writer who is fascinated by content fashion, celebrity and lifestyle. We helps clients bring the right content to the right people.</p>
+                                <ul class="social-icons list-unstyled list-inline mb-0">
+                                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fab fa-medium"></i></a></li>
+                                    <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
 
-                    <p>
-                       {{ comment.body }}
-                    </p>
+                        <!-- widget popular posts -->
+                        <div class="widget rounded">
+                            <div class="widget-header text-center">
+                                <h3 class="widget-title">Latest Posts</h3>
+                                <img src="{% static 'images/wave.svg' %}" class="wave" alt="wave" />
+                            </div>
 
-                    <a class="font-weight-bold" href="#">Reply</a>
+                            <div class="widget-content">
+                                <!-- post -->
 
-                    <ul class="list-unstyled mt-5">
-
-                    </ul>
-                    {% endfor %}
-                </li>
-                <!-- End Comment -->
-
-            </ul>
-        </div>
-
-        <div class="mb-5">
-            <h3>Post a comment</h3>
-        </div>
-
-        <!-- Form -->
-        <form action="." method="post" class="js-validate">
-            <div class="form-row">
-                <div class="col-sm-6 mb-sm-3">
-                    <div class="js-form-message form-group">
-                        <label class="input-label">Name</label>
-                        <input
-                                type="text"
-                                class="form-control"
-                                name="name"
-                                id="inputName"
-                                placeholder="Name"
-                                aria-label="Name"
-                                required
-                                data-msg="Please enter your name."
-                        />
-                    </div>
-                </div>
-
-                <div class="col-sm-6 mb-sm-3">
-                    <div class="js-form-message form-group">
-                        <label class="input-label">Email</label>
-                        <input
-                                type="text"
-                                class="form-control"
-                                name="name"
-                                id="inputName"
-                                placeholder="Name"
-                                aria-label="Name"
-                                required
-                                data-msg="Please enter a valid comment."
-                        />
-                    </div>
-                </div>
-
-                <div class="col-12 mb-sm-3">
-                    <div class="js-form-message form-group">
-                        <label class="input-label">Comment</label>
-                        <textarea
-                                class="form-control"
-                                name="body"
-                                rows="7"
-                                id="descriptionTextarea"
-                                placeholder="Comment"
-                                required
-                                data-msg="Please enter your message."
-                        ></textarea>
-                    </div>
-                </div>
-            </div>
-            {% csrf_token %}
-            <div class="d-flex justify-content-center">
-                <button
-                        type="submit"
-                        class="btn btn-primary btn-wide transition-3d-hover"
-                >
-                    Submit
-                </button>
-            </div>
-        </form>
-        <!-- End Form -->
-    </div>
-    </div>
-    <!-- End Article Description Section -->
-
-    <!-- Blog Card Section -->
-    <div class="container">
-        <div class="w-lg-75 border-top space-2 mx-lg-auto">
-            <div class="mb-3 mb-sm-5">
-                <h3>Related blogs</h3>
-            </div>
-
-            <div class="row">
+                                {% for post in latest_post %}
 
 
-                {% for post in similar_post %}
-                    <div class="col-md-6">
+                                    <div class="post post-list-sm circle">
+                                        <div class="thumb circle">
+                                            <span class="number">1</span>
+                                            <a href="">
+                                                <div class="inner">
+                                                    <img src="{{ post.thumbnail.url }}" alt="post-title" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="details clearfix">
+                                            <h6 class="post-title my-0"><a href="{{ post.get_absolute_url}}">{{ post.title }}</a></h6>
+                                            <ul class="meta list-inline mt-1 mb-0">
+                                                <li class="list-inline-item">{{ post.creation | date }}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                {% endfor %}
 
-                        <!-- Blog Card -->
-                        <article class="border-bottom h-100 py-5">
-                            <div class="row justify-content-between">
-                                <div class="col-6">
-                                    <a
-                                            class="d-block small font-weight-bold text-cap mb-2"
-                                            href="{{ post.get_absolute_url }}"
-                                    >{{ post.title }}</a
-                                    >
-                                    <h4 class="mb-0">
-                                        <a class="text-inherit" href="{{ post.get_absolute_url }}"
-                                        >{{ post.short_description }}</a
-                                        >
-                                    </h4>
+
+
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- widget categories -->
+                        <div class="widget rounded">
+                            <div class="widget-header text-center">
+                                <h3 class="widget-title">Explore Topics</h3>
+                                <img src="{% static 'images/wave.svg' %}" class="wave" alt="wave" />
+                            </div>
+                            <div class="widget-content">
+                                <ul class="list">
+                                    <li><a href="#">Lifestyle</a><span>(5)</span></li>
+                                    <li><a href="#">Inspiration</a><span>(2)</span></li>
+                                    <li><a href="#">Fashion</a><span>(4)</span></li>
+                                    <li><a href="#">Politic</a><span>(1)</span></li>
+                                    <li><a href="#">Trending</a><span>(7)</span></li>
+                                    <li><a href="#">Culture</a><span>(3)</span></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- widget post carousel -->
+                        <div class="widget rounded">
+                            <div class="widget-header text-center">
+                                <h3 class="widget-title">Celebration</h3>
+                                <img src="{% static 'images/wave.svg' %}" class="wave" alt="wave" />
+                            </div>
+                            <div class="widget-content">
+                                <div class="post-carousel-widget">
+                                    <!-- post -->
+                                    <div class="post post-carousel">
+                                        <div class="thumb rounded">
+                                            <a href="category.html" class="category-badge position-absolute">How to</a>
+                                            <a href="blog-single.html">
+                                                <div class="inner">
+                                                    <img src="{% static 'images/widgets/widget-carousel-1.jpg' %}" alt="post-title" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <h5 class="post-title mb-0 mt-4"><a href="blog-single.html">5 Easy Ways You Can Turn Future Into Success</a></h5>
+                                        <ul class="meta list-inline mt-2 mb-0">
+                                            <li class="list-inline-item"><a href="#">Katen Doe</a></li>
+                                            <li class="list-inline-item">29 March 2021</li>
+                                        </ul>
+                                    </div>
+                                    <!-- post -->
+                                    <div class="post post-carousel">
+                                        <div class="thumb rounded">
+                                            <a href="category.html" class="category-badge position-absolute">Trending</a>
+                                            <a href="blog-single.html">
+                                                <div class="inner">
+                                                    <img src="{% static 'images/widgets/widget-carousel-2.jpg' %}" alt="post-title" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <h5 class="post-title mb-0 mt-4"><a href="blog-single.html">Master The Art Of Nature With These 7 Tips</a></h5>
+                                        <ul class="meta list-inline mt-2 mb-0">
+                                            <li class="list-inline-item"><a href="#">Katen Doe</a></li>
+                                            <li class="list-inline-item">29 March 2021</li>
+                                        </ul>
+                                    </div>
+                                    <!-- post -->
+                                    <div class="post post-carousel">
+                                        <div class="thumb rounded">
+                                            <a href="category.html" class="category-badge position-absolute">How to</a>
+                                            <a href="blog-single.html">
+                                                <div class="inner">
+                                                    <img src="{% static 'images/widgets/widget-carousel-1.jpg' %}" alt="post-title" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <h5 class="post-title mb-0 mt-4"><a href="blog-single.html">5 Easy Ways You Can Turn Future Into Success</a></h5>
+                                        <ul class="meta list-inline mt-2 mb-0">
+                                            <li class="list-inline-item"><a href="#">Katen Doe</a></li>
+                                            <li class="list-inline-item">29 March 2021</li>
+                                        </ul>
+                                    </div>
                                 </div>
-
-                                <div class="col-5">
-                                    <img class="img-fluid" src="{{ post.thumbnail.url }}" width="500px" height="280px" alt="Image Description"/>
+                                <!-- carousel arrows -->
+                                <div class="slick-arrows-bot">
+                                    <button type="button" data-role="none" class="carousel-botNav-prev slick-custom-buttons" aria-label="Previous"><i class="icon-arrow-left"></i></button>
+                                    <button type="button" data-role="none" class="carousel-botNav-next slick-custom-buttons" aria-label="Next"><i class="icon-arrow-right"></i></button>
                                 </div>
                             </div>
-                        </article>
-                        <!-- End Blog Card -->
+                        </div>
+
+                        <!-- widget advertisement -->
+                        <div class="widget no-container rounded text-md-center">
+                            <span class="ads-title">- Sponsored Ad -</span>
+                            <a href="#" class="widget-ads">
+                                <img src="{%  static 'images/ads/ad-360.png' %}" alt="Advertisement" />
+                            </a>
+                        </div>
+
+                       
+
+
+
+            <!-- post -->
+            {% for post in similar_post %}
+            <div class="post post-list-sm circle mt-5 ">
+                <div class="thumb circle">
+                    <span class="number">3</span>
+                    <a href="{{ post.get_absolute_url }}">
+                        <div class="inner">
+                            <img src="{{ post.thumbnail.url }}" alt="post-title" />
+                        </div>
+                    </a>
+                </div>
+                <div class="details clearfix">
+                    <h6 class="post-title my-0"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h6>
+                    <ul class="meta list-inline mt-1 mb-0">
+                        <li class="list-inline-item">{{ post.creation | date }}</li>
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-xl">
+            <div class="footer-inner">
+                <div class="row d-flex align-items-center gy-4">
+                    <!-- copyright text -->
+                    <div class="col-md-4">
+                        <span class="copyright">© 2021 Katen. Template by ThemeGer.</span>
                     </div>
-                {% endfor %}
 
+                    <!-- social icons -->
+                    <div class="col-md-4 text-center">
+                        <ul class="social-icons list-unstyled list-inline mb-0">
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-medium"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
 
-
-
-
-
+                    <!-- go to top button -->
+                    <div class="col-md-4">
+                        <a href="#" id="return-to-top" class="float-md-end"><i class="icon-arrow-up"></i>Back to Top</a>
+                    </div>
+                </div>
             </div>
         </div>
+    </footer>
+
+</div><!-- end site wrapper -->
+
+<!-- search popup area -->
+<div class="search-popup">
+    <!-- close button -->
+    <button type="button" class="btn-close" aria-label="Close"></button>
+    <!-- content -->
+    <div class="search-content">
+        <div class="text-center">
+            <h3 class="mb-4 mt-0">Press ESC to close</h3>
+        </div>
+        <!-- form -->
+        <form class="d-flex search-form">
+            <input class="form-control me-2" type="search" placeholder="Search and press enter ..." aria-label="Search">
+            <button class="btn btn-default btn-lg" type="submit"><i class="icon-magnifier"></i></button>
+        </form>
     </div>
-    <!-- End Blog Card Section -->
+</div>
 
+<!-- canvas menu -->
+<div class="canvas-menu d-flex align-items-end flex-column">
+    <!-- close button -->
+    <button type="button" class="btn-close" aria-label="Close"></button>
 
-</main>
-<!-- ========== END MAIN ========== -->
-<!-- ========== FOOTER ========== -->
+    <!-- logo -->
+    <div class="logo">
+        <img src="{% static 'images/logo.svg' %}" alt="Katen" />
+    </div>
 
-<footer class="container text-center space-1">
-    <!-- Logo -->
-    <a class="d-inline-flex align-items-center mb-2" href="#" aria-label="Blueberry">
-        <img class="brand" src="{% static "blueberry/assets/svg/logos/logo.svg" %}"
-             alt="{% static "blueberry/assets/svg/logos/logo.svg" %}">
-    </a>
-    <!-- End Logo -->
+    <!-- menu -->
+    <nav>
+        <ul class="vertical-menu">
+            <li class="active">
+                <a href="index.html">Home</a>
+                <ul class="submenu">
+                    <li><a href="index.html">Magazine</a></li>
+                    <li><a href="personal.html">Personal</a></li>
+                    <li><a href="personal-alt.html">Personal Alt</a></li>
+                    <li><a href="minimal.html">Minimal</a></li>
+                    <li><a href="classic.html">Classic</a></li>
+                </ul>
+            </li>
+            <li><a href="category.html">Lifestyle</a></li>
+            <li><a href="category.html">Inspiration</a></li>
+            <li>
+                <a href="#">Pages</a>
+                <ul class="submenu">
+                    <li><a href="category.html">Category</a></li>
+                    <li><a href="blog-single.html">Blog Single</a></li>
+                    <li><a href="blog-single-alt.html">Blog Single Alt</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-    <p class="small text-muted mb-0">2020 © Nimusoft. All rights reserved.</p>
+    <!-- social icons -->
+    <ul class="social-icons list-unstyled list-inline mb-0 mt-auto w-100">
+        <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+        <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+        <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+        <li class="list-inline-item"><a href="#"><i class="fab fa-medium"></i></a></li>
+        <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+    </ul>
+</div>
 
-    <!-- JS Global Compulsory -->
-    <script src="{% static "blueberry/assets/vendor/jquery/dist/jquery.min.js" %}"></script>
-    <script src="{% static "blueberry/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js" %}"></script>
-    <script src="{% static "blueberry/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" %}"></script>
+<!-- JAVA SCRIPTS -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/slick.min.js' %}"></script>
+<script src="{% static 'js/jquery.sticky-sidebar.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
 
-
-    <!-- IE Support -->
-    <script>
-        if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
-            document.write(
-                '<script src="../../assets/vendor/polifills.js"><\/script>'
-            );
-    </script>
 </body>
+
+<!-- Mirrored from maanjaa.com/themeger/katen-demo/html/blog-single-alt.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 May 2021 18:18:50 GMT -->
 </html>

@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages', 
     'django.contrib.staticfiles',
-    'album',
     'blog',
     'storages',
     'taggit',
@@ -135,8 +134,8 @@ STATIC_ROOT = BASE_DIR, 'static_root'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
-AWS_ACCESS_KEY_ID = 'AKIARVGPJVYVP7XN2E5V'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = 'AKIARVGPJVYVLNFAAMTG'
+AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'nasim.secpstorage'
 AWS_S3_FILE_OVERWRITE = False
 # AWS_QUERYSTRING_AUTH = False

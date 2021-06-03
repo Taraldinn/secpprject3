@@ -60,10 +60,7 @@
 <!-- site wrapper -->
 <div class="site-wrapper">
 
-    <div class="main-overlay"></div>
-
-    <!-- header -->
-    <header class="header-personal light">
+    <header class="header-personal">
         <div class="container-xl header-top">
             <div class="row align-items-center">
 
@@ -81,8 +78,7 @@
 
                 <div class="col-md-4 col-sm-12 col-xs-12 text-center">
                     <!-- site logo -->
-                    <a class="navbar-brand" href="personal-alt.html"><img src="{% static 'images/other/avatar-lg.png' %}" alt="logo" /></a>
-                    <a href="personal-alt.html" class="d-block text-logo">Katen<span class="dot">.</span></a>
+                    <a href="/" class="d-block text-logo">Fardin<span class="dot">.</span></a>
                     <span class="slogan d-block">Professional Writer & Personal Blogger</span>
                 </div>
 
@@ -108,7 +104,7 @@
                     <!-- menus -->
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown active">
-                            <a class="nav-link " href="index.html">Home</a>
+                            <a class="nav-link " href="/">Home</a>
 
                         </li>
                         <li class="nav-item">
@@ -125,23 +121,23 @@
         </nav>
     </header>
 
-    <!-- section hero -->
-    <section class="hero data-bg-image d-flex align-items-center" data-bg-image="{% static 'images/other/hero.jpg' %}">
+    <section class="page-header">
         <div class="container-xl">
-            <!-- call to action -->
-            <div class="cta text-center">
-                <h2 class="mt-0 mb-4">I'm Katen Doe.</h2>
-                <p class="mt-0 mb-4">Hello, I’m a content writer who is fascinated by content fashion, celebrity and lifestyle. She helps clients bring the right content to the right people.</p>
-                <a href="#" class="btn btn-light mt-2">About Me</a>
+            <div class="text-center">
+                <h1 class="mt-0 mb-2">{{ category.name }}</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{ category.name }}</li>
+                    </ol>
+                </nav>
             </div>
         </div>
-        <!-- animated mouse wheel -->
-        <span class="mouse">
-            <span class="wheel"></span>
-        </span>
-        <!-- wave svg -->
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 260"><path fill="#FFF" fill-opacity="1" d="M0,256L60,245.3C120,235,240,213,360,218.7C480,224,600,256,720,245.3C840,235,960,181,1080,176C1200,171,1320,213,1380,234.7L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
     </section>
+
+
+    <!-- section hero -->
+
 
     <!-- section main content -->
     <section class="main-content mt-5">
@@ -153,54 +149,50 @@
 
                     <div class="row gy-4">
                         {% for post in posts  %}
-                        <div class="col-sm-6">
-                            <!-- post -->
+                            <div class="col-sm-6">
+                                <!-- post -->
 
 
 
-                            <div class="post post-grid rounded bordered">
-                                <div class="thumb top-rounded">
-                                    <a href="category.html" class="category-badge position-absolute">{{post.category.name }}</a>
-                                    <span class="post-format">
+                                <div class="post post-grid rounded bordered">
+                                    <div class="thumb top-rounded">
+                                        <a href="category.html" class="category-badge position-absolute">{{post.category.name }}</a>
+                                        <span class="post-format">
                                         <i class="icon-picture"></i>
                                     </span>
-                                    <a href="blog-single.html">
-                                        <div class="inner">
-                                            <img src="{{ post.thumbnail.url }}" alt="post-title" />
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="details">
-                                    <ul class="meta list-inline mb-0">
-                                        <li class="list-inline-item"><a href="#"><img src="{% static 'images/other/author-sm.png' %}" class="author" alt="author"/>Katen Doe</a></li>
-                                        <li class="list-inline-item">29 March 2021</li>
-                                        <a href="{{ post.get_absolute_url }}">
-                                            <h5 class="post-title mb-3 mt-3">{{ post.title }}</h5>
+                                        <a href="blog-single.html">
+                                            <div class="inner">
+                                                <img src="{{ post.thumbnail.url }}" alt="post-title" />
+                                            </div>
                                         </a>
+                                    </div>
+                                    <div class="details">
+                                        <ul class="meta list-inline mb-0">
+                                            <li class="list-inline-item"><a href="#"><img src="{% static 'images/other/author-sm.png' %}" class="author" alt="author"/>Katen Doe</a></li>
+                                            <li class="list-inline-item">29 March 2021</li>
+                                            <p class="excerpt mb-0">{{ post.sort_description }}</p>
+                                    </div>
+                                    <div class="post-bottom clearfix d-flex align-items-center">
+                                        <div class="social-share me-auto">
+                                            <button class="toggle-button icon-share"></button>
+                                            <ul class="icons list-unstyled list-inline mb-0">
+                                                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                                                <li class="list-inline-item"><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+                                                <li class="list-inline-item"><a href="#"><i class="far fa-envelope"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="more-button float-end">
+                                            <a href=""><span class="icon-options"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                        <p class="excerpt mb-0">{{ post.sort_description }}</p>
-                                </div>
-                                <div class="post-bottom clearfix d-flex align-items-center">
-                                    <div class="social-share me-auto">
-                                        <button class="toggle-button icon-share"></button>
-                                        <ul class="icons list-unstyled list-inline mb-0">
-                                            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                                            <li class="list-inline-item"><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
-                                            <li class="list-inline-item"><a href="#"><i class="far fa-envelope"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="more-button float-end">
-                                        <a href=""><span class="icon-options"></span></a>
-                                    </div>
-                                </div>
+
                             </div>
-
-
-                        </div>
-                            {% endfor %}
+                        {% endfor %}
 
                     </div>
 
@@ -268,22 +260,22 @@
                                 {% for post in latest_post %}
 
 
-                                <div class="post post-list-sm circle">
-                                    <div class="thumb circle">
-                                        <span class="number">1</span>
-                                        <a href="">
-                                            <div class="inner">
-                                                <img src="{{ post.thumbnail.url }}" alt="post-title" />
-                                            </div>
-                                        </a>
+                                    <div class="post post-list-sm circle">
+                                        <div class="thumb circle">
+                                            <span class="number">1</span>
+                                            <a href="">
+                                                <div class="inner">
+                                                    <img src="{{ post.thumbnail.url }}" alt="post-title" />
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="details clearfix">
+                                            <h6 class="post-title my-0"><a href="{{ post.get_absolute_url}}">{{ post.title }}</a></h6>
+                                            <ul class="meta list-inline mt-1 mb-0">
+                                                <li class="list-inline-item">{{ post.creation | date }}</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="details clearfix">
-                                        <h6 class="post-title my-0"><a href="{{ post.get_absolute_url}}">{{ post.title }}</a></h6>
-                                        <ul class="meta list-inline mt-1 mb-0">
-                                            <li class="list-inline-item">{{ post.creation | date }}</li>
-                                        </ul>
-                                    </div>
-                                </div>
                                 {% endfor %}
 
 
@@ -304,7 +296,7 @@
                             <div class="widget-content">
                                 <ul class="list">
                                     {% for category in categories %}
-                                    <li><a href="{{ category.get_absolute_url }}">{{ category.name }}</a><span></span></li>
+                                        <li><a href="{{ category.get_absolute_url }}">{{ category.name }}</a><span></span></li>
                                     {% endfor %}
                                 </ul>
                             </div>
@@ -510,7 +502,7 @@
             <h3 class="mb-4 mt-0">Press ESC to close</h3>
         </div>
         <!-- form -->
-        <form class="d-flex search-form" action="{% url 'blog:search_blog'  %}">
+        <form class="d-flex search-form" action="{% url 'blog:search_blog' %}">
             <input class="form-control me-2" type="search" placeholder="Search and press enter ..." aria-label="Search" name="q">
             <button class="btn btn-default btn-lg" type="submit"><i class="icon-magnifier"></i></button>
         </form>
